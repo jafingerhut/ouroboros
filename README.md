@@ -1,7 +1,7 @@
 # Introduction
 
 A tiny test project that demonstrates an odd behavior of the
-ClojureScript compiler that I am hoping ot figure out whether it is a
+ClojureScript compiler that I am hoping to figure out whether it is a
 bug, expected behavior, lucky accident, or what.
 
 Namespace `ouroboros.foo` is normal enough.  It defines a couple of
