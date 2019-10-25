@@ -37,6 +37,28 @@ function `tail-offset`, once with an argument that is of type
 `ouroboros.foo/Transient`, once with the other type, everything seems
 to work functionally at run time as one might hope.
 
+Note: The tests pass when I compile the ClojureScript using the
+`:advanced` level of optimization.  I get various kinds of failures
+for these other settings of `:optimizations`:
+
+* `:none` causes cljsbuild test to fail with error: `ReferenceError:
+  goog is not defined`
+
+* `:whitespace` causes cljsbuild test to fail with error: `TypeError:
+  Cannot set property 'Unicode' of undefined`
+
+* `:simple` causes cljsbuild test to fail with error: `ReferenceError:
+  ouroboros is not defined`
+
+* `:advanced` causes cljsbuild test to pass with no errors, only the
+  warning messages below during compilation, which appear for all
+  settings of `:optimizations`:
+
+```
+WARNING: Use of undeclared Var ouroboros.foo/Transient at line 5 src/main/cljs/ouroboros/bar.cljs
+WARNING: Use of undeclared Var ouroboros.foo/Transient at line 10 src/main/cljs/ouroboros/bar.cljs
+```
+
 Why doesn't the compiler give an error?
 
 How is this code working?  Or is it some strange happenstance accident
