@@ -4,6 +4,14 @@ A tiny test project that demonstrates an odd behavior of the
 ClojureScript compiler that I am hoping to figure out whether it is a
 bug, expected behavior, lucky accident, or what.
 
+My motivation for asking is because I also get the same warning when
+compiling the latest version of the ClojureScript version of the
+core.rrb-vector library, version 0.1.0, from which the code in this
+project was boiled down to the core of the issue.  While it is trivial
+to change the code in this project to avoid the warning, it is not so
+trivial to do so for the current core.rrb-vector code (possible, but
+perhaps a bit tedious to restructure the code to avoid the warning).
+
 Namespace `ouroboros.foo` is normal enough.  It defines a couple of
 `deftype`s, and some functions for creating instances of those types.
 It requires namespace `ouroboros.bar` and calls a function from there
