@@ -11,6 +11,8 @@ project was boiled down to the core of the issue.  While it is trivial
 to change the code in this project to avoid the warning, it is not so
 trivial to do so for the current core.rrb-vector code (possible, but
 perhaps a bit tedious to restructure the code to avoid the warning).
+This is an open issue on that library to track what I learn about it:
+https://clojure.atlassian.net/browse/CRRBV-24
 
 Namespace `ouroboros.foo` is normal enough.  It defines a couple of
 `deftype`s, and some functions for creating instances of those types.
